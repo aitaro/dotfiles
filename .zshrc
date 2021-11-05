@@ -4,7 +4,7 @@ alias relogin='exec $SHELL -l'
 alias dc="docker-compose"
 
 # pathの設定
-export PATH="$PATH:`pwd`/flutter/bin"
+export PATH="$PATH:/Users/aitaro/development/flutter/bin"
 
 # zplug
 export ZPLUG_HOME=/opt/homebrew/opt/zplug
