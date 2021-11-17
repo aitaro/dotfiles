@@ -37,6 +37,9 @@ bindkey '^[[B' history-substring-search-down
 autoload -U compinit
 compinit
 
+# kubectl の補完
+source <(kubectl completion zsh)
+
 # 　各種インストール用
 eval "$(/opt/homebrew/bin/brew shellenv)"
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
