@@ -43,3 +43,11 @@ source <(kubectl completion zsh)
 # 　各種インストール用
 eval "$(/opt/homebrew/bin/brew shellenv)"
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# GCloud
+export CLOUDSDK_PYTHON="/usr/bin/python"
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/aitaro/development/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/aitaro/development/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/aitaro/development/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/aitaro/development/google-cloud-sdk/completion.zsh.inc'; fi
