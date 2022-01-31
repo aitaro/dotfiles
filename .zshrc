@@ -3,9 +3,13 @@ alias ll="ls -alF"
 alias relogin='exec $SHELL -l'
 alias dc="docker-compose"
 alias dce="docker-compose exec"
+alias emulator="/Users/aitaro/Library/Android/sdk/emulator/emulator"
+
+# state保存したままだとバグるのでデータリセットして起動する
+alias android="emulator @Pixel_4_API_32 -wipe-data"
 
 # 環境変数の設定
-export PATH="$PATH:/Users/aitaro/development/flutter/bin"
+export PATH="$PATH:/Users/aitaro/development/flutter/bin:$HOME/.pub-cache/bin"
 export GOPRIVATE=github.com/uzuPJ/protos
 
 # zplug
