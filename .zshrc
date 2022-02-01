@@ -55,3 +55,6 @@ if [ -f '/Users/aitaro/development/google-cloud-sdk/path.zsh.inc' ]; then . '/Us
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/aitaro/development/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/aitaro/development/google-cloud-sdk/completion.zsh.inc'; fi
+
+# homebewのgoのpathをこれで上書きする
+export PATH="/usr/local/go/bin:$HOME/go/bin:$PATH"
