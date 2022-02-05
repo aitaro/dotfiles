@@ -23,6 +23,9 @@ zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
+zplug "popstas/zsh-command-time"
+export ZSH_COMMAND_TIME_COLOR="cyan"
+
 ## 未インストール項目をインストールする
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
