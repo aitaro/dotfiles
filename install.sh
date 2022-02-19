@@ -11,3 +11,4 @@ cd $BASEDIR
 # シンボリックリンクを貼る
 ln -snfv ${PWD}/.zshrc/kitty ~/
 ln -snfv ${PWD}/.config/kitty ~/.config
+ln -snfv ${PWD}/.hammerspoon ~/
