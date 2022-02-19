@@ -8,10 +8,6 @@ set -u
 BASEDIR=$(dirname $0)
 cd $BASEDIR
 
-# dotfilesディレクトリにある、ドットから始まり2文字以上の名前のファイルに対して
-for f in .??*; do
-    [ "$f" = ".git" ] && continue
-
-    # シンボリックリンクを貼る
-    ln -snfv ${PWD}/"$f" ~/
-done
+# シンボリックリンクを貼る
+ln -snfv ${PWD}/.zshrc/kitty ~/
+ln -snfv ${PWD}/.config/kitty ~/.config
