@@ -9,17 +9,16 @@ local spaces = require("hs._asm.undocumented.spaces")
 -- double tap の間隔[s]
 module.timeFrame = 1
 
+-- デバッグ文字を出力する
+-- hs.console.printStyledtext("debug string")
 
 function MoveFullScreenWindow(app)
-    local activeSpace = spaces.activeSpace()
     local win = app:focusedWindow()
-    win:spacesMoveTo(activeSpace)
-
     local mainScreen = hs.screen.find(spaces.mainScreenUUID())
     local winFrame = win:frame()
     local screenFrame = mainScreen:fullFrame()
     winFrame.w = screenFrame.w
-    winFrame.h = screenFrame.h
+    winFrame.h = screenFrame.h * 0.7
     winFrame.y = screenFrame.y
     winFrame.x = screenFrame.x
     win:setFrame(winFrame, 0)
@@ -33,10 +32,12 @@ module.action = function()
     local app = hs.application.get(appName)
 
     if app == nil then
+        hs.keycodes.setLayout("ABC")
         hs.application.launchOrFocus(appName)
     elseif app:isFrontmost() then
         app:hide()
     else -- すでに存在する場合、window を activeSpace に移動させて focus する
+        hs.keycodes.setLayout("ABC")
         MoveFullScreenWindow(app)
     end
 end
