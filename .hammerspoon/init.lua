@@ -31,15 +31,16 @@ module.action = function()
     local appName = "kitty"
     local app = hs.application.get(appName)
 
-    if app == nil then
-        hs.keycodes.setLayout("ABC")
-        hs.application.launchOrFocus(appName)
-    elseif app:isFrontmost() then
-        app:hide()
-    else -- すでに存在する場合、window を activeSpace に移動させて focus する
-        hs.keycodes.setLayout("ABC")
-        MoveFullScreenWindow(app)
-    end
+    -- 一旦動作を止める
+    -- if app == nil then
+    --     hs.keycodes.setLayout("ABC")
+    --     hs.application.launchOrFocus(appName)
+    -- elseif app:isFrontmost() then
+    --     app:hide()
+    -- else -- すでに存在する場合、window を activeSpace に移動させて focus する
+    --     hs.keycodes.setLayout("ABC")
+    --     MoveFullScreenWindow(app)
+    -- end
 end
 
 
