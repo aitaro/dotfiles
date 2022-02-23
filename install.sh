@@ -9,6 +9,7 @@ BASEDIR=$(dirname $0)
 cd $BASEDIR
 
 # シンボリックリンクを貼る
-ln -snfv ${PWD}/.zshrc/kitty ~/
+ln -snfv ${PWD}/.zshrc ~/
+ln -snfv ${PWD}/.zsh ~/
 ln -snfv ${PWD}/.config/kitty ~/.config
 ln -snfv ${PWD}/.hammerspoon ~/

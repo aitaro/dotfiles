@@ -41,6 +41,8 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 # 補完
+fpath=(~/.zsh/completion $fpath)
+
 autoload -U compinit
 compinit
 
