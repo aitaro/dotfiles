@@ -13,3 +13,4 @@ ln -snfv ${PWD}/.zshrc ~/
 ln -snfv ${PWD}/.zsh ~/
 ln -snfv ${PWD}/.config/kitty ~/.config
 ln -snfv ${PWD}/.hammerspoon ~/
+ln -snfv ${PWD}/.hyper.js ~/
