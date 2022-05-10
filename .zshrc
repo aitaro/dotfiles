@@ -4,7 +4,7 @@ alias relogin='exec $SHELL -l'
 alias dc="docker-compose"
 alias dce="docker-compose exec"
 alias emulator="/Users/aitaro/Library/Android/sdk/emulator/emulator"
-alias nt="terminal-notifier -sound Pop"
+alias tn='terminal-notifier -sound Pop -message "Command Finished"'
 
 # state保存したままだとバグるのでデータリセットして起動する
 alias android="emulator @Pixel_4_API_32 -wipe-data"
