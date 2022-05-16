@@ -41,7 +41,7 @@ zplug load # --verbose
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-# 補完
+# 補完系
 fpath=(~/.zsh/completion $fpath)
 
 autoload -U compinit
@@ -65,3 +65,6 @@ if [ -f '/Users/aitaro/development/google-cloud-sdk/completion.zsh.inc' ]; then 
 
 # homebewのgoのpathをこれで上書きする
 export PATH="/usr/local/go/bin:$HOME/go/bin:$PATH"
+
+# path を通してから実行
+eval "`pip completion --zsh`"
