@@ -5,6 +5,7 @@ alias dc="docker-compose"
 alias dce="docker-compose exec"
 alias emulator="/Users/aitaro/Library/Android/sdk/emulator/emulator"
 alias tn='terminal-notifier -sound Pop -message "Command Finished"'
+alias evans-chat-dev='evans --tls --host chat.dev.uzu-app.com --port 443  -r repl --package chat.v1 --service Chat'
 
 # state保存したままだとバグるのでデータリセットして起動する
 alias android="emulator @Pixel_4_API_32 -wipe-data"
