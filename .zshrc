@@ -5,7 +5,12 @@ alias dc="docker-compose"
 alias dce="docker-compose exec"
 alias emulator="/Users/aitaro/Library/Android/sdk/emulator/emulator"
 alias tn='terminal-notifier -sound Pop -message "Command Finished"'
-alias evans-chat-dev='evans --tls --host chat.dev.uzu-app.com --port 443  -r repl --package chat.v1 --service Chat'
+
+# evans向け alias
+alias evans-chat-dev='evans --tls --host chat.dev.uzu-app.com --port 443 -r repl --package chat.v1 --service Chat'
+
+alias evans-backend-local='evans --host localhost --port 18080 -r repl --package backend.v2 --service Backend'
+alias evans-backend-dev='evans --tls --host grpc-v2.backend.dev.uzu-app.com --port 443 -r repl --package backend.v2 --service Backend'
 
 # state保存したままだとバグるのでデータリセットして起動する
 alias android="emulator @Pixel_4_API_32 -wipe-data"
@@ -69,3 +74,6 @@ export PATH="/usr/local/go/bin:$HOME/go/bin:$PATH"
 
 # path を通してから実行
 eval "`pip completion --zsh`"
+
+# direnv
+eval "$(direnv hook zsh)"
