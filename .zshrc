@@ -48,13 +48,23 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 # 補完系
+
 fpath=(~/.zsh/completion $fpath)
 
 autoload -U compinit
 compinit
 
-# kubectl の補完
+## kubectl の補完
 source <(kubectl completion zsh)
+
+## brew の補完
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
 
 # 　各種インストール用
 eval "$(/opt/homebrew/bin/brew shellenv)"
