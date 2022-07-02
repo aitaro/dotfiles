@@ -1,0 +1,11 @@
+[pull]
+	rebase = true
+[user]
+	name = Aitaro Chaya
+	email = aitaro.chaya@gmail.com
+[url "git@github.com:"]
+	insteadOf = https://github.com
+[init]
+	defaultBranch = main
+[alias]
+	crypt-users = "! git log --format=full .git-crypt/keys/*/*/*.gpg | grep -E '^            .+' | sed 's/ *$//g' | awk '{gsub(/^[ \t]+/,\"\"); print $0 }'"

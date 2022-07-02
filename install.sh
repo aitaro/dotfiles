@@ -10,6 +10,7 @@ cd $BASEDIR
 
 # シンボリックリンクを貼る
 ln -snfv ${PWD}/.zshrc ~/
+ln -snfv ${PWD}/.gitconfig ~/
 ln -snfv ${PWD}/.zsh ~/
 ln -snfv ${PWD}/.config/kitty ~/.config
 ln -snfv ${PWD}/.hammerspoon ~/
